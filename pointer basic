@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+    int a = 5;
+
+    int* x = &a;
+    printf("%p\n",&a);     // address of a
+    printf("%p\n",x);      // address of a
+    printf("%p\n",&x);          // address of x
+
+    printf("%d\n",*x);        // *x a er address er vitore jeye tar value collect kore
+    printf("%p\n",*&x);      //&x= address of x , then * jabe &x er vitore mane x er adress er vitore jekhane ache a er adress
+
+    printf("%d\n",**&x);     // &x = address of x , then * jabe &x er vitore mane x er adress er vitore jekhane ache a er adress ,then * jabe a er adress er vitore jekhane ache a er value 5
+
+    *x=7;                 // here *x = inside value o x's adress which was 5 but here i update 7 by use *
+     printf("%d\n",a);
+}
